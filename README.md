@@ -61,6 +61,23 @@ Use the custom management command to quickly add a test user, categories, and a 
 python manage.py populate_data
 ```
 
+Re-execute the Command again to clear all data and repopulate
+
+You can now run this command with arguments like this:
+
+```bash
+python manage.py populate_data --users 10 --ads 50
+```
+
+If you don't provide arguments, it will fall back to defaults of 5 users and 20 ads.
+
+To populate the database without clearing existing data (for example, to add more entries to an already populated database):
+
+```bash
+python manage.py populate_data --no-clear
+```
+
+
 ### 3. Run the Development Server
 
 Start the Django development server to view your project in a web browser.
